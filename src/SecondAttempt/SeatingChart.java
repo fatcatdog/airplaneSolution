@@ -7,12 +7,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-//if you change the amount of seats, need to update seatOptions method which has a hard coded 20 seat value
+//this program would need to be run on each individual row of seats
 public class SeatingChart {
     Seat[] seatChart;
 
     public SeatingChart() {
-        seatChart = new Seat[20];
+        seatChart = new Seat[10];
         seatChart[0] = new Seat("1A");
         seatChart[1] = new Seat("1B");
         seatChart[2] = new Seat("1C");
@@ -25,19 +25,6 @@ public class SeatingChart {
         seatChart[7] = new Seat("1H");
         seatChart[8] = new Seat("1I", false);
         seatChart[9] = new Seat("1J");
-
-        seatChart[10] = new Seat("2A");
-        seatChart[11] = new Seat("2B");
-        seatChart[12] = new Seat("2C");
-
-        seatChart[13] = new Seat("2D");
-        seatChart[14] = new Seat("2E", false);
-        seatChart[15] = new Seat("2F");
-        seatChart[16] = new Seat("2G");
-
-        seatChart[17] = new Seat("1H");
-        seatChart[18] = new Seat("1I");
-        seatChart[19] = new Seat("1J");
     }
 
     void howBigIsYourParty(int partySize) {
@@ -56,7 +43,7 @@ public class SeatingChart {
 
     void showSeatOptionsOne() {
         List<int[]> options = new ArrayList<int[]>();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 10; i++) {
 
             if (seatChart[i].available) {
                 int[] seatOption = {i};
@@ -74,7 +61,7 @@ public class SeatingChart {
 
     void showSeatOptionsTwo() {
         List<int[]> options = new ArrayList<int[]>();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 10; i++) {
 
             if (i == seatChart.length - 1){
                 break;
@@ -97,7 +84,7 @@ public class SeatingChart {
 
     void showSeatOptionsThree() {
         List<int[]> options = new ArrayList<int[]>();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 10; i++) {
 
             if (i == seatChart.length - 2){
                 break;
@@ -120,7 +107,7 @@ public class SeatingChart {
 
     void showSeatOptionsFour() {
         List<int[]> options = new ArrayList<int[]>();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 10; i++) {
 
             if (i == seatChart.length - 3){
                 break;
